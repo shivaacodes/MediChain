@@ -1,71 +1,7 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
-/* Global Styles */
-body {
-  font-family: "Inter", "Roboto", Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-}
-
-/* Theme Variables */
-@layer base {
-  :root {
-    --background: 0 0% 100%; /* Crisp white base */
-    --foreground: 240 10% 3.9%; /* Dark text for contrast */
-    --card: 0 0% 100%; /* White cards */
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 174 100% 29%; /* Teal (#00A896) for trust/safety */
-    --primary-foreground: 0 0% 98%; /* Near-white for text on primary */
-    --secondary: 240 4.8% 95.9%; /* Light gray for subtle elements */
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 43 74% 66%; /* Subtle gold (#D4AF37) for blockchain */
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%; /* Red (#EF4444) for warnings */
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 174 100% 29%; /* Teal ring for focus states */
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    /* Dark mode variables (optional, expandable later) */
-    --background: 240 10% 3.9%; /* Dark gray */
-    --foreground: 0 0% 98%; /* Light text */
-    --primary: 174 100% 29%; /* Same teal */
-    --accent: 43 74% 66%; /* Same gold */
-    --destructive: 0 84.2% 60.2%; /* Same red */
-  }
-}
-
-/* Utility Classes */
-@layer base {
-  * {
-    @apply border-border outline-ring outline-offset-2;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-/* Optional Custom Utilities */
-@layer utilities {
-  .btn {
-    @apply px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90;
-  }
-  .card {
-    @apply p-6 bg-card text-card-foreground rounded-lg shadow-md;
-  }
+/* Optional: Define custom theme values */
+@theme {
+  --color-background: #f3f4f6; /* For bg-background */
+  --color-primary: #1d4ed8; /* For text-primary, bg-primary, etc. */
 }
