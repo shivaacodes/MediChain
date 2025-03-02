@@ -1,3 +1,7 @@
 export default function Home() {
-  return <h1>MediChain</h1>;
+  return (
+    <main className="flex items-center justify-center min-h-screen bg-white">
+      <h1 className="text-5xl font-extrabold text-black">MediChain</h1>
+    </main>
+  );
 }
