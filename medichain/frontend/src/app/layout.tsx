@@ -1,33 +1,22 @@
 import type { Metadata } from "next";
-import { Poppins, Urbanist, Inter, Manrope } from "next/font/google";
+import { Urbanist, Poppins } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/landingpage/Footer";
 
 const poppins = Poppins({
-  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
 });
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "MediChain - Verify Your Medication",
+  title: "MediChain",
   description:
     "Using AI, blockchain, and computer vision to detect fake medications.",
 };
@@ -40,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${urbanist.variable} ${inter.variable} ${manrope.variable} font-poppins antialiased flex flex-col min-h-screen bg-white text-gray-900`}
+        className={`${poppins.variable} ${urbanist.variable} font-poppins antialiased flex flex-col min-h-screen bg-white text-gray-900`}
       >
-        {children}
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
