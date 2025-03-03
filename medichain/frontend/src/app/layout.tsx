@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.variable} ${urbanist.variable} font-poppins antialiased flex flex-col min-h-screen bg-white text-gray-900`}
       >
