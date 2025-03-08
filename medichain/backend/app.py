@@ -1,13 +1,10 @@
-# Main Flask app entry point
-
 from flask import Flask
 from flask_cors import CORS
-from routes import init_routes
+from routes.scan import scan_bp
 
 app = Flask(__name__)
 CORS(app)
-
-init_routes(app)
+app.register_blueprint(scan_bp, url_prefix="/api")
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
